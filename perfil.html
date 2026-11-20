@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil profesional | Kevin Rossel Figueroa</title>
+  <link rel="icon" href="img/perfil.svg" type="image/svg+xml">
+  <!-- Bootstrap 5 e íconos (copias locales) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos propios (archivo CSS separado) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="pagina-perfil">
+  <!-- ===== Menú de navegación (igual en todas las páginas) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Kevin Rossel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-person-vcard"></i> Datos personales</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="bi bi-person-badge"></i> Perfil profesional</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencia.html"><i class="bi bi-briefcase"></i> Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacion.html"><i class="bi bi-mortarboard"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html"><i class="bi bi-kanban"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="referencias.html"><i class="bi bi-people"></i> Referencias</a></li>
+        </ul>
+        <button id="btnTema" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" type="button">
+          <i class="bi bi-moon-stars"></i> Modo oscuro
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <h1 class="titulo-seccion mb-4">Perfil profesional</h1>
+    <div class="row g-4">
+      <!-- ===== Resumen con controles de estilo ===== -->
+      <div class="col-lg-7">
+        <article class="tarjeta p-4 h-100">
+          <div class="d-flex flex-wrap gap-2 mb-3 align-items-center">
+            <span class="small text-muted me-1">Tamaño del texto:</span>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Tamaño de letra">
+              <button id="btnMenos" class="btn btn-outline-secondary">A-</button>
+              <button id="btnNormal" class="btn btn-outline-secondary">A</button>
+              <button id="btnMas" class="btn btn-outline-secondary">A+</button>
+            </div>
+            <label for="colorResaltado" class="small text-muted ms-3">Color de resaltado:</label>
+            <input id="colorResaltado" type="color" class="form-control form-control-color form-control-sm" value="#fff3cd">
+          </div>
+          <div id="textoPerfil">
+            <p>Soy <span class="resaltado">Ingeniero de Sistemas</span> titulado de la Universidad Mayor de San Andrés,
+              con experiencia en el <span class="resaltado">desarrollo de aplicaciones web</span> de principio a fin:
+              análisis de requisitos, diseño de interfaces, programación del lado del cliente y del servidor, y puesta en producción.</p>
+            <p>Me motiva crear soluciones que <span class="resaltado">simplifiquen el trabajo</span> de las personas. He liderado equipos
+              pequeños y trabajado con metodologías ágiles (Scrum y Kanban).</p>
+            <div id="textoExtra" class="texto-extra">
+              <p>Actualmente me especializo en aplicaciones con <span class="resaltado">JavaScript moderno</span> (ES6+), Node.js y React,
+                además de bases de datos MySQL y PostgreSQL. Me interesa la accesibilidad web y las buenas prácticas de código limpio.</p>
+              <p>Fuera del trabajo, doy talleres gratuitos de programación para estudiantes de colegio.</p>
+            </div>
+          </div>
+          <button id="btnLeerMas" class="btn btn-link px-0">Leer más <i class="bi bi-chevron-down"></i></button>
+        </article>
+      </div>
+
+      <!-- ===== Habilidades técnicas (barras de progreso) ===== -->
+      <div class="col-lg-5">
+        <section class="tarjeta p-4 h-100">
+          <h2 class="h5 mb-3"><i class="bi bi-cpu"></i> Habilidades técnicas</h2>
+          <div class="habilidad mb-3" data-valor="90"><div class="d-flex justify-content-between"><span>JavaScript</span><span class="porcentaje">0%</span></div>
+            <div class="progress" role="progressbar" aria-label="JavaScript"><div class="progress-bar bg-warning" style="width:0%"></div></div></div>
+          <div class="habilidad mb-3" data-valor="85"><div class="d-flex justify-content-between"><span>HTML5 y CSS3</span><span class="porcentaje">0%</span></div>
+            <div class="progress" role="progressbar" aria-label="HTML y CSS"><div class="progress-bar bg-danger" style="width:0%"></div></div></div>
+          <div class="habilidad mb-3" data-valor="75"><div class="d-flex justify-content-between"><span>PHP / Laravel</span><span class="porcentaje">0%</span></div>
+            <div class="progress" role="progressbar" aria-label="PHP"><div class="progress-bar bg-info" style="width:0%"></div></div></div>
+          <div class="habilidad mb-3" data-valor="80"><div class="d-flex justify-content-between"><span>MySQL / PostgreSQL</span><span class="porcentaje">0%</span></div>
+            <div class="progress" role="progressbar" aria-label="Bases de datos"><div class="progress-bar bg-success" style="width:0%"></div></div></div>
+          <div class="habilidad" data-valor="65"><div class="d-flex justify-content-between"><span>React</span><span class="porcentaje">0%</span></div>
+            <div class="progress" role="progressbar" aria-label="React"><div class="progress-bar" style="width:0%"></div></div></div>
+          <button id="btnAnimar" class="btn btn-sm btn-primary mt-3"><i class="bi bi-play-fill"></i> Animar barras</button>
+        </section>
+      </div>
+
+      <!-- ===== Competencias blandas (acordeón Bootstrap) ===== -->
+      <div class="col-lg-7">
+        <section class="tarjeta p-4">
+          <h2 class="h5 mb-3"><i class="bi bi-chat-heart"></i> Competencias blandas</h2>
+          <div class="accordion" id="acordeonCompetencias">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1">Trabajo en equipo</button></h3>
+              <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#acordeonCompetencias"><div class="accordion-body">Colaboro con diseñadores, testers y clientes; comparto conocimiento mediante revisiones de código.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">Comunicación</button></h3>
+              <div id="c2" class="accordion-collapse collapse" data-bs-parent="#acordeonCompetencias"><div class="accordion-body">Explico temas técnicos con lenguaje sencillo a personas no técnicas.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">Resolución de problemas</button></h3>
+              <div id="c3" class="accordion-collapse collapse" data-bs-parent="#acordeonCompetencias"><div class="accordion-body">Analizo la causa raíz de los errores y propongo soluciones medibles.</div></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ===== Objetivo profesional (lista) ===== -->
+      <div class="col-lg-5">
+        <section class="tarjeta p-4 h-100">
+          <h2 class="h5 mb-3"><i class="bi bi-bullseye"></i> Objetivos profesionales</h2>
+          <ol class="mb-0">
+            <li>Formar parte de un equipo de producto con impacto social.</li>
+            <li>Obtener la certificación AWS Cloud Practitioner.</li>
+            <li>Liderar la arquitectura de proyectos web de mediana escala.</li>
+          </ol>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-3 mt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; <span id="anio"></span> Kevin Rossel Figueroa · Perfil profesional</span>
+      <!-- Forma 1 de escuchar eventos: atributo onclick en el HTML -->
+      <button class="btn btn-sm btn-light" onclick="volverArriba()"><i class="bi bi-arrow-up"></i> Volver arriba</button>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

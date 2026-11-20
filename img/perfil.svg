@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ilustración de Kevin Rossel con traje">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f4e79"/>
+      <stop offset="1" stop-color="#2e86ab"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#fondo)"/>
+  <!-- cuerpo / traje -->
+  <path d="M60 400 C70 300 130 270 200 270 C270 270 330 300 340 400 Z" fill="#1b2a3a"/>
+  <path d="M170 272 L200 340 L230 272 Z" fill="#f4f4f4"/>
+  <path d="M193 285 L207 285 L212 345 L200 360 L188 345 Z" fill="#c0392b"/>
+  <!-- cuello -->
+  <rect x="178" y="225" width="44" height="50" rx="12" fill="#d9a77c"/>
+  <!-- cabeza -->
+  <ellipse cx="200" cy="170" rx="70" ry="80" fill="#e6b88f"/>
+  <!-- cabello -->
+  <path d="M130 160 C125 95 170 80 205 82 C250 84 278 110 272 160 C262 128 240 115 205 118 C170 120 145 130 130 160 Z" fill="#2b1d14"/>
+  <!-- ojos -->
+  <ellipse cx="175" cy="170" rx="7" ry="8" fill="#2b1d14"/>
+  <ellipse cx="225" cy="170" rx="7" ry="8" fill="#2b1d14"/>
+  <path d="M162 152 Q175 146 188 152" stroke="#2b1d14" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M212 152 Q225 146 238 152" stroke="#2b1d14" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- nariz y sonrisa -->
+  <path d="M200 175 L195 198 L205 198" stroke="#b9875f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M178 213 Q200 230 222 213" stroke="#8e4b32" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

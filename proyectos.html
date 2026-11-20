@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Kevin Rossel Figueroa</title>
+  <link rel="icon" href="img/perfil.svg" type="image/svg+xml">
+  <!-- Bootstrap 5 e íconos (copias locales) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos propios (archivo CSS separado) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="pagina-proyectos">
+  <!-- ===== Menú de navegación (igual en todas las páginas) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Kevin Rossel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-person-vcard"></i> Datos personales</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="bi bi-person-badge"></i> Perfil profesional</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencia.html"><i class="bi bi-briefcase"></i> Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacion.html"><i class="bi bi-mortarboard"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html"><i class="bi bi-kanban"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="referencias.html"><i class="bi bi-people"></i> Referencias</a></li>
+        </ul>
+        <button id="btnTema" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" type="button">
+          <i class="bi bi-moon-stars"></i> Modo oscuro
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <h1 class="titulo-seccion mb-3">Proyectos</h1>
+
+    <!-- ===== Búsqueda y filtros ===== -->
+    <div class="row g-2 mb-4 align-items-center">
+      <div class="col-md-5">
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input id="buscador" type="search" class="form-control" placeholder="Buscar proyecto...">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="btn-group flex-wrap" role="group" aria-label="Filtrar por categoría">
+          <button class="btn btn-outline-dark active btn-cat" data-cat="todos">Todos</button>
+          <button class="btn btn-outline-dark btn-cat" data-cat="web">Web</button>
+          <button class="btn btn-outline-dark btn-cat" data-cat="movil">Móvil</button>
+          <button class="btn btn-outline-dark btn-cat" data-cat="social">Social</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4" id="gridProyectos">
+      <div class="col-md-6 col-lg-3 col-proyecto" data-categoria="web">
+        <div class="card tarjeta card-proyecto h-100">
+          <img src="img/proyecto-tienda.svg" class="card-img-top" alt="Captura del proyecto TiendaYa">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">TiendaYa</h2>
+            <p class="card-text small flex-grow-1">Tienda en línea para emprendedores locales con carrito de compras y pagos QR.</p>
+            <button class="btn btn-primary btn-sm btn-detalle" data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                    data-nombre="TiendaYa" data-tecnologias="JavaScript, PHP, MySQL" data-anio="2024" data-img="img/proyecto-tienda.svg"
+                    data-repo="https://github.com/kevinrossel/tiendaya">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 col-proyecto" data-categoria="web">
+        <div class="card tarjeta card-proyecto h-100">
+          <img src="img/proyecto-clinica.svg" class="card-img-top" alt="Captura del proyecto MediCita">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">MediCita</h2>
+            <p class="card-text small flex-grow-1">Sistema de reservas de citas médicas con recordatorios por correo.</p>
+            <button class="btn btn-primary btn-sm btn-detalle" data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                    data-nombre="MediCita" data-tecnologias="Laravel, Bootstrap, MySQL" data-anio="2023" data-img="img/proyecto-clinica.svg"
+                    data-repo="https://github.com/kevinrossel/medicita">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 col-proyecto" data-categoria="movil">
+        <div class="card tarjeta card-proyecto h-100">
+          <img src="img/proyecto-finanzas.svg" class="card-img-top" alt="Captura del proyecto FinanzApp">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">FinanzApp</h2>
+            <p class="card-text small flex-grow-1">Aplicación para controlar gastos personales con gráficos mensuales.</p>
+            <button class="btn btn-primary btn-sm btn-detalle" data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                    data-nombre="FinanzApp" data-tecnologias="React Native, Firebase" data-anio="2022" data-img="img/proyecto-finanzas.svg"
+                    data-repo="https://github.com/kevinrossel/finanzapp">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 col-proyecto" data-categoria="social">
+        <div class="card tarjeta card-proyecto h-100">
+          <img src="img/proyecto-escuela.svg" class="card-img-top" alt="Captura del proyecto AulaNet">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">AulaNet</h2>
+            <p class="card-text small flex-grow-1">Plataforma gratuita de tareas para colegios fiscales (proyecto voluntario).</p>
+            <button class="btn btn-primary btn-sm btn-detalle" data-bs-toggle="modal" data-bs-target="#modalProyecto"
+                    data-nombre="AulaNet" data-tecnologias="Node.js, Express, PostgreSQL" data-anio="2021" data-img="img/proyecto-escuela.svg"
+                    data-repo="https://github.com/kevinrossel/aulanet">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p id="sinResultados" class="alert alert-warning mt-3 d-none">No se encontraron proyectos.</p>
+
+    <!-- ===== Modal Bootstrap de detalles ===== -->
+    <div class="modal fade" id="modalProyecto" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="modalTitulo">Proyecto</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImg" src="" alt="" class="img-fluid rounded mb-3">
+            <p><strong>Tecnologías:</strong> <span id="modalTec"></span></p>
+            <p><strong>Año:</strong> <span id="modalAnio"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button id="btnFavorito" class="btn btn-outline-warning" type="button"><i class="bi bi-star"></i> Marcar favorito</button>
+            <a id="modalRepo" class="btn btn-dark" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> Repositorio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-3 mt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; <span id="anio"></span> Kevin Rossel Figueroa · Perfil profesional</span>
+      <!-- Forma 1 de escuchar eventos: atributo onclick en el HTML -->
+      <button class="btn btn-sm btn-light" onclick="volverArriba()"><i class="bi bi-arrow-up"></i> Volver arriba</button>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/proyectos.js"></script>
+</body>
+</html>

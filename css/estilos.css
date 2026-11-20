@@ -1,0 +1,113 @@
+/* =========================================================
+   Hoja de estilos general del sitio "Perfil Profesional"
+   ========================================================= */
+:root {
+  --color-primario: #1f4e79;
+  --color-secundario: #2e86ab;
+  --color-acento: #f39c12;
+  --fondo: #f5f7fa;
+  --texto: #222831;
+  --tarjeta: #ffffff;
+}
+
+/* Modo oscuro: se activa agregando la clase .modo-oscuro al <body> desde JS */
+body.modo-oscuro {
+  --fondo: #121821;
+  --texto: #e8eaed;
+  --tarjeta: #1d2633;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  transition: background .3s, color .3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { flex: 1; }
+
+.navbar { background: var(--color-primario) !important; }
+.navbar .nav-link.active { color: var(--color-acento) !important; font-weight: 600; }
+
+.tarjeta {
+  background: var(--tarjeta);
+  color: var(--texto);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+}
+body.modo-oscuro .table { --bs-table-bg: var(--tarjeta); --bs-table-color: var(--texto); }
+body.modo-oscuro .list-group-item,
+body.modo-oscuro .accordion-item,
+body.modo-oscuro .accordion-button,
+body.modo-oscuro .form-control,
+body.modo-oscuro .form-select { background: var(--tarjeta); color: var(--texto); }
+body.modo-oscuro .text-muted { color: #9aa4b1 !important; }
+body.modo-oscuro .carousel-dark .carousel-indicators [data-bs-target] { background-color: #fff; }
+body.modo-oscuro .alert-light { background: #26303e; color: var(--texto); border-color: #3a4656 !important; }
+
+.titulo-seccion {
+  border-left: 6px solid var(--color-acento);
+  padding-left: .75rem;
+  font-weight: 700;
+}
+
+/* ---------- index.html (Datos personales) ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+  color: #fff;
+  border-radius: 1.25rem;
+}
+.foto-perfil {
+  width: 220px; height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  cursor: pointer;
+  transition: transform .3s;
+}
+.foto-perfil:hover { transform: scale(1.04) rotate(-2deg); }
+
+/* ---------- perfil.html ---------- */
+.texto-extra { display: none; }
+.texto-extra.visible { display: block; }
+.resaltado { background: #fff3cd; color: #222; padding: 0 .2rem; border-radius: .25rem; }
+
+/* ---------- experiencia.html (línea de tiempo) ---------- */
+.linea-tiempo { position: relative; padding-left: 2rem; }
+.linea-tiempo::before {
+  content: ""; position: absolute; left: .6rem; top: 0; bottom: 0;
+  width: 4px; background: var(--color-secundario); border-radius: 2px;
+}
+.item-tiempo { position: relative; margin-bottom: 1.5rem; transition: opacity .3s, transform .3s; }
+.item-tiempo::before {
+  content: ""; position: absolute; left: -1.85rem; top: 1.2rem;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--color-acento); border: 3px solid var(--tarjeta);
+}
+.item-tiempo.oculto { display: none; }
+.item-tiempo.destacado { transform: translateX(8px); box-shadow: 0 6px 22px rgba(46, 134, 171, .35); }
+
+/* ---------- formacion.html ---------- */
+.fila-nueva { animation: aparecer .8s ease; }
+@keyframes aparecer {
+  from { background: #d1e7dd; }
+  to   { background: transparent; }
+}
+
+/* ---------- proyectos.html ---------- */
+.card-proyecto { transition: transform .25s; }
+.card-proyecto:hover { transform: translateY(-6px); }
+.card-proyecto img { border-radius: 1rem 1rem 0 0; }
+.col-proyecto.oculto { display: none; }
+
+/* ---------- referencias.html ---------- */
+.cita { font-style: italic; font-size: 1.15rem; }
+.carousel-item { min-height: 230px; }
+.referencia-item { cursor: pointer; }
+.referencia-item.seleccionada { border-left: 6px solid var(--color-acento); }
+
+footer { background: var(--color-primario); color: #fff; }
+body.modo-oscuro .carousel-control-prev-icon,
+body.modo-oscuro .carousel-control-next-icon { filter: none !important; }

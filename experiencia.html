@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiencia laboral | Kevin Rossel Figueroa</title>
+  <link rel="icon" href="img/perfil.svg" type="image/svg+xml">
+  <!-- Bootstrap 5 e íconos (copias locales) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos propios (archivo CSS separado) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="pagina-experiencia">
+  <!-- ===== Menú de navegación (igual en todas las páginas) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Kevin Rossel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-person-vcard"></i> Datos personales</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="bi bi-person-badge"></i> Perfil profesional</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencia.html"><i class="bi bi-briefcase"></i> Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacion.html"><i class="bi bi-mortarboard"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html"><i class="bi bi-kanban"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="referencias.html"><i class="bi bi-people"></i> Referencias</a></li>
+        </ul>
+        <button id="btnTema" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" type="button">
+          <i class="bi bi-moon-stars"></i> Modo oscuro
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <h1 class="titulo-seccion mb-3">Experiencia laboral</h1>
+    <p class="lead">Recorrido profesional ordenado del más reciente al más antiguo.</p>
+
+    <!-- ===== Filtros (agregar/quitar clases) ===== -->
+    <div class="d-flex flex-wrap gap-2 mb-2" id="filtros">
+      <button class="btn btn-primary filtro" data-filtro="todos">Todos</button>
+      <button class="btn btn-outline-primary filtro" data-filtro="tiempo-completo">Tiempo completo</button>
+      <button class="btn btn-outline-primary filtro" data-filtro="freelance">Freelance</button>
+      <button class="btn btn-outline-primary filtro" data-filtro="practicas">Prácticas</button>
+    </div>
+    <p class="small text-muted" id="contadorExp">Mostrando 4 experiencias</p>
+
+    <div class="row g-4">
+      <!-- ===== Línea de tiempo ===== -->
+      <div class="col-lg-8">
+        <div class="linea-tiempo">
+        <div class="item-tiempo tarjeta p-4" data-tipo="tiempo-completo">
+          <div class="d-flex flex-wrap justify-content-between">
+            <h2 class="h5 mb-1">Desarrollador Full Stack Senior</h2><span class="badge bg-success align-self-start">Tiempo completo</span>
+          </div>
+          <p class="text-muted mb-2"><i class="bi bi-building"></i> Andina Soft S.R.L. · <i class="bi bi-calendar3"></i> Ene 2023 – Actualidad</p>
+          <ul class="mb-0"><li>Lideré un equipo de 4 desarrolladores en el sistema de facturación electrónica.</li><li>Reduje en 40% el tiempo de carga del portal de clientes.</li><li>Implementé pruebas automatizadas con Jest.</li></ul>
+        </div>
+        <div class="item-tiempo tarjeta p-4" data-tipo="freelance">
+          <div class="d-flex flex-wrap justify-content-between">
+            <h2 class="h5 mb-1">Desarrollador Web Freelance</h2><span class="badge bg-info align-self-start">Freelance</span>
+          </div>
+          <p class="text-muted mb-2"><i class="bi bi-building"></i> Clientes independientes · <i class="bi bi-calendar3"></i> Jun 2021 – Dic 2022</p>
+          <ul class="mb-0"><li>Desarrollé 12 sitios web para pequeñas empresas y emprendimientos.</li><li>Integré pasarelas de pago y reservas en línea.</li></ul>
+        </div>
+        <div class="item-tiempo tarjeta p-4" data-tipo="tiempo-completo">
+          <div class="d-flex flex-wrap justify-content-between">
+            <h2 class="h5 mb-1">Desarrollador Front-End</h2><span class="badge bg-success align-self-start">Tiempo completo</span>
+          </div>
+          <p class="text-muted mb-2"><i class="bi bi-building"></i> Banco Ficticio del Sur · <i class="bi bi-calendar3"></i> Mar 2019 – May 2021</p>
+          <ul class="mb-0"><li>Construí componentes reutilizables para la banca por internet.</li><li>Mejoré la accesibilidad del sitio según la norma WCAG 2.1.</li></ul>
+        </div>
+        <div class="item-tiempo tarjeta p-4" data-tipo="practicas">
+          <div class="d-flex flex-wrap justify-content-between">
+            <h2 class="h5 mb-1">Practicante de Sistemas</h2><span class="badge bg-secondary align-self-start">Prácticas</span>
+          </div>
+          <p class="text-muted mb-2"><i class="bi bi-building"></i> Gobierno Autónomo Municipal (área TI) · <i class="bi bi-calendar3"></i> Ago 2018 – Feb 2019</p>
+          <ul class="mb-0"><li>Apoyé en el mantenimiento de la red y soporte a usuarios.</li><li>Programé un sistema de inventario en PHP y MySQL.</li></ul>
+        </div>
+        </div>
+      </div>
+
+      <!-- ===== Resumen en tabla ===== -->
+      <div class="col-lg-4">
+        <aside class="tarjeta p-4 sticky-lg-top" style="top:90px">
+          <h2 class="h5"><i class="bi bi-bar-chart"></i> Resumen</h2>
+          <table class="table table-sm table-hover mb-3">
+            <thead><tr><th>Área</th><th class="text-end">Años</th></tr></thead>
+            <tbody>
+              <tr><td>Front-End</td><td class="text-end">6</td></tr>
+              <tr><td>Back-End</td><td class="text-end">4</td></tr>
+              <tr><td>Liderazgo</td><td class="text-end">2</td></tr>
+            </tbody>
+          </table>
+          <div class="alert alert-info small mb-0" role="status">
+            <i class="bi bi-info-circle"></i> Pasa el mouse sobre una experiencia para destacarla.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-3 mt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; <span id="anio"></span> Kevin Rossel Figueroa · Perfil profesional</span>
+      <!-- Forma 1 de escuchar eventos: atributo onclick en el HTML -->
+      <button class="btn btn-sm btn-light" onclick="volverArriba()"><i class="bi bi-arrow-up"></i> Volver arriba</button>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/experiencia.js"></script>
+</body>
+</html>

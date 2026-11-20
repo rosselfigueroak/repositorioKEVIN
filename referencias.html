@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referencias laborales | Kevin Rossel Figueroa</title>
+  <link rel="icon" href="img/perfil.svg" type="image/svg+xml">
+  <!-- Bootstrap 5 e íconos (copias locales) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos propios (archivo CSS separado) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="pagina-referencias">
+  <!-- ===== Menú de navegación (igual en todas las páginas) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Kevin Rossel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-person-vcard"></i> Datos personales</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="bi bi-person-badge"></i> Perfil profesional</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencia.html"><i class="bi bi-briefcase"></i> Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacion.html"><i class="bi bi-mortarboard"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html"><i class="bi bi-kanban"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="referencias.html"><i class="bi bi-people"></i> Referencias</a></li>
+        </ul>
+        <button id="btnTema" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" type="button">
+          <i class="bi bi-moon-stars"></i> Modo oscuro
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <h1 class="titulo-seccion mb-4">Referencias laborales</h1>
+
+    <!-- ===== Carrusel Bootstrap de testimonios ===== -->
+    <section class="tarjeta p-4 mb-4">
+      <div id="carruselTestimonios" class="carousel slide carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carruselTestimonios" data-bs-slide-to="0" class="active" aria-label="Testimonio 1"></button>
+          <button type="button" data-bs-target="#carruselTestimonios" data-bs-slide-to="1" aria-label="Testimonio 2"></button>
+          <button type="button" data-bs-target="#carruselTestimonios" data-bs-slide-to="2" aria-label="Testimonio 3"></button>
+        </div>
+        <div class="carousel-inner text-center px-5">
+          <div class="carousel-item active"><i class="bi bi-quote fs-1 text-primary"></i>
+            <p class="cita">"Kevin es responsable y propone mejoras sin que se lo pidan."</p>
+            <p class="fw-bold mb-0">Ing. Mariela Quispe</p><p class="text-muted">Gerente de TI · Andina Soft</p></div>
+          <div class="carousel-item"><i class="bi bi-quote fs-1 text-primary"></i>
+            <p class="cita">"Entregó nuestro sitio a tiempo y nos enseñó a administrarlo."</p>
+            <p class="fw-bold mb-0">Lic. Jorge Vargas</p><p class="text-muted">Propietario · Café Altiplano</p></div>
+          <div class="carousel-item"><i class="bi bi-quote fs-1 text-primary"></i>
+            <p class="cita">"Su trabajo en accesibilidad marcó un antes y un después."</p>
+            <p class="fw-bold mb-0">Ing. Carla Mamani</p><p class="text-muted">Jefa de Proyecto · Banco Ficticio del Sur</p></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselTestimonios" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselTestimonios" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span></button>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <!-- ===== Lista de contactos de referencia ===== -->
+      <div class="col-lg-7">
+        <section class="tarjeta p-4 h-100">
+          <h2 class="h5"><i class="bi bi-person-lines-fill"></i> Contactos de referencia</h2>
+          <p class="small text-muted">Clic para seleccionar · Doble clic para ver el teléfono.</p>
+          <ul class="list-group" id="listaReferencias">
+            <li class="list-group-item referencia-item" data-telefono="+591 711 11111">
+              <strong>Ing. Mariela Quispe</strong> — Gerente de TI, Andina Soft
+              <span class="telefono badge bg-secondary ms-2 d-none"></span></li>
+            <li class="list-group-item referencia-item" data-telefono="+591 722 22222">
+              <strong>Ing. Carla Mamani</strong> — Jefa de Proyecto, Banco Ficticio del Sur
+              <span class="telefono badge bg-secondary ms-2 d-none"></span></li>
+            <li class="list-group-item referencia-item" data-telefono="+591 733 33333">
+              <strong>Lic. Jorge Vargas</strong> — Propietario, Café Altiplano
+              <span class="telefono badge bg-secondary ms-2 d-none"></span></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ===== Dejar una recomendación ===== -->
+      <div class="col-lg-5">
+        <section class="tarjeta p-4 h-100">
+          <h2 class="h5"><i class="bi bi-pencil-square"></i> Deja una recomendación</h2>
+          <form id="formRecomendacion">
+            <input id="recAutor" class="form-control mb-2" placeholder="Tu nombre y cargo" required>
+            <textarea id="recTexto" class="form-control" rows="3" maxlength="150" placeholder="Escribe tu recomendación..." required></textarea>
+            <div class="d-flex justify-content-between small text-muted mt-1">
+              <span>Ctrl + Enter para publicar</span><span id="contadorCaracteres">0 / 150</span>
+            </div>
+            <button class="btn btn-primary mt-2" type="submit">Publicar</button>
+          </form>
+          <div id="recomendaciones" class="mt-3"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-3 mt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; <span id="anio"></span> Kevin Rossel Figueroa · Perfil profesional</span>
+      <!-- Forma 1 de escuchar eventos: atributo onclick en el HTML -->
+      <button class="btn btn-sm btn-light" onclick="volverArriba()"><i class="bi bi-arrow-up"></i> Volver arriba</button>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/referencias.js"></script>
+</body>
+</html>

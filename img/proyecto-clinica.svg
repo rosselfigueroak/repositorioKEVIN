@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-label="Imagen del proyecto MediCita">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2980b9"/><stop offset="1" stop-color="#6dd5fa"/></linearGradient></defs>
+<rect width="500" height="320" fill="url(#g)"/>
+<circle cx="430" cy="50" r="90" fill="#ffffff" opacity=".12"/><circle cx="40" cy="300" r="70" fill="#ffffff" opacity=".12"/>
+<g transform="translate(0,-35)"><rect x="225" y="130" width="50" height="150" rx="8" fill="#fff"/><rect x="175" y="180" width="150" height="50" rx="8" fill="#fff"/></g>
+<text x="250" y="305" fill="#fff" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">MediCita</text>
+</svg>

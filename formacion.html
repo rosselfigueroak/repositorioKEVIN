@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formación académica | Kevin Rossel Figueroa</title>
+  <link rel="icon" href="img/perfil.svg" type="image/svg+xml">
+  <!-- Bootstrap 5 e íconos (copias locales) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos propios (archivo CSS separado) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="pagina-formacion">
+  <!-- ===== Menú de navegación (igual en todas las páginas) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Kevin Rossel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-person-vcard"></i> Datos personales</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="bi bi-person-badge"></i> Perfil profesional</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencia.html"><i class="bi bi-briefcase"></i> Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacion.html"><i class="bi bi-mortarboard"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html"><i class="bi bi-kanban"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="referencias.html"><i class="bi bi-people"></i> Referencias</a></li>
+        </ul>
+        <button id="btnTema" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" type="button">
+          <i class="bi bi-moon-stars"></i> Modo oscuro
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <h1 class="titulo-seccion mb-4">Formación académica</h1>
+
+    <!-- ===== Tarjetas de formación principal ===== -->
+    <div class="row g-4 mb-4">
+      <div class="col-md-6">
+        <div class="tarjeta p-4 h-100 border-top border-5 border-primary">
+          <i class="bi bi-mortarboard-fill fs-1 text-primary"></i>
+          <h2 class="h5 mt-2">Licenciatura en Ingeniería de Sistemas</h2>
+          <p class="mb-1">Universidad Mayor de San Andrés (UMSA)</p>
+          <p class="text-muted mb-0">2012 – 2017 · Titulado por proyecto de grado</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="tarjeta p-4 h-100 border-top border-5 border-warning">
+          <i class="bi bi-award-fill fs-1 text-warning"></i>
+          <h2 class="h5 mt-2">Diplomado en Desarrollo de Aplicaciones Web</h2>
+          <p class="mb-1">Escuela de Posgrado (modalidad virtual)</p>
+          <p class="text-muted mb-0">2020 · 800 horas académicas</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Tabla de cursos con agregar / eliminar ===== -->
+    <section class="tarjeta p-4 mb-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+        <h2 class="h5 mb-0"><i class="bi bi-journal-check"></i> Cursos y certificaciones</h2>
+        <span class="badge bg-primary fs-6" id="totalCursos">0 cursos</span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped align-middle" id="tablaCursos">
+          <thead class="table-primary">
+            <tr><th>Curso</th><th>Institución</th><th>Año</th><th class="text-end">Acción</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>JavaScript Avanzado</td><td>Plataforma en línea</td><td>2022</td>
+              <td class="text-end"><button class="btn btn-sm btn-outline-danger btn-eliminar"><i class="bi bi-trash"></i></button></td></tr>
+            <tr><td>Scrum Fundamentals</td><td>Certificación ágil</td><td>2021</td>
+              <td class="text-end"><button class="btn btn-sm btn-outline-danger btn-eliminar"><i class="bi bi-trash"></i></button></td></tr>
+            <tr><td>Bases de datos con PostgreSQL</td><td>Colegio de Ingenieros</td><td>2019</td>
+              <td class="text-end"><button class="btn btn-sm btn-outline-danger btn-eliminar"><i class="bi bi-trash"></i></button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <form id="formCurso" class="row g-2 align-items-end">
+        <div class="col-md-4"><label class="form-label small" for="cursoNombre">Curso</label>
+          <input id="cursoNombre" class="form-control" required placeholder="Ej. Node.js desde cero"></div>
+        <div class="col-md-3"><label class="form-label small" for="cursoInst">Institución</label>
+          <input id="cursoInst" class="form-control" required placeholder="Ej. Academia X"></div>
+        <div class="col-md-2"><label class="form-label small" for="cursoAnio">Año</label>
+          <input id="cursoAnio" class="form-control" type="number" min="1990" max="2030" required value="2026"></div>
+        <div class="col-md-2"><label class="form-label small" for="cursoPosicion">Insertar</label>
+          <select id="cursoPosicion" class="form-select">
+            <option value="final">Al final</option>
+            <option value="inicio">Al inicio</option>
+          </select></div>
+        <div class="col-md-1 d-grid"><button class="btn btn-success" type="submit" title="Agregar"><i class="bi bi-plus-lg"></i></button></div>
+      </form>
+    </section>
+
+    <!-- ===== Lista generada desde JavaScript ===== -->
+    <section class="tarjeta p-4">
+      <h2 class="h5"><i class="bi bi-list-stars"></i> Formación complementaria</h2>
+      <p class="text-muted small">Esta lista se crea completamente con JavaScript a partir de un arreglo.</p>
+      <ul class="list-group list-group-flush" id="listaComplementaria"></ul>
+    </section>
+  </main>
+
+  <footer class="py-3 mt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; <span id="anio"></span> Kevin Rossel Figueroa · Perfil profesional</span>
+      <!-- Forma 1 de escuchar eventos: atributo onclick en el HTML -->
+      <button class="btn btn-sm btn-light" onclick="volverArriba()"><i class="bi bi-arrow-up"></i> Volver arriba</button>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/formacion.js"></script>
+</body>
+</html>

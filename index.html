@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos personales | Kevin Rossel Figueroa</title>
+  <link rel="icon" href="img/perfil.svg" type="image/svg+xml">
+  <!-- Bootstrap 5 e íconos (copias locales) -->
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos propios (archivo CSS separado) -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="pagina-inicio">
+  <!-- ===== Menú de navegación (igual en todas las páginas) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Kevin Rossel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-person-vcard"></i> Datos personales</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="bi bi-person-badge"></i> Perfil profesional</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencia.html"><i class="bi bi-briefcase"></i> Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacion.html"><i class="bi bi-mortarboard"></i> Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html"><i class="bi bi-kanban"></i> Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="referencias.html"><i class="bi bi-people"></i> Referencias</a></li>
+        </ul>
+        <button id="btnTema" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" type="button">
+          <i class="bi bi-moon-stars"></i> Modo oscuro
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <!-- ===== HERO: foto y datos principales ===== -->
+    <section class="hero p-4 p-md-5 mb-4 shadow">
+      <div class="row align-items-center g-4">
+        <div class="col-md-4 text-center">
+          <img id="fotoPerfil" class="foto-perfil shadow" src="img/perfil.svg"
+               alt="Fotografía formal de Kevin Rossel" title="Haz clic para cambiar la foto">
+          <p class="small mt-2 mb-0 opacity-75"><i class="bi bi-hand-index"></i> Haz clic en la foto</p>
+        </div>
+        <div class="col-md-8">
+          <p id="saludo" class="fs-5 mb-1">Hola</p>
+          <h1 class="display-5 fw-bold">Kevin Rossel Figueroa</h1>
+          <h2 class="h4 fw-light">Ingeniero de Sistemas · Desarrollador Full Stack</h2>
+          <p class="mt-3 mb-0">Desarrollo aplicaciones web modernas, accesibles y fáciles de mantener.
+            Más de 6 años de experiencia con JavaScript, PHP y bases de datos.</p>
+          <span class="badge bg-warning text-dark mt-3" id="estadoDisponible">Disponible para nuevos proyectos</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <!-- ===== Datos personales (tabla) ===== -->
+      <div class="col-lg-6">
+        <div class="tarjeta p-4 h-100">
+          <h3 class="titulo-seccion h4 mb-3">Datos personales</h3>
+          <table class="table table-borderless mb-0">
+            <tbody>
+              <tr><th scope="row"><i class="bi bi-calendar-event"></i> Fecha de nacimiento</th><td>14 de marzo de 1994</td></tr>
+              <tr><th scope="row"><i class="bi bi-flag"></i> Nacionalidad</th><td>Boliviana</td></tr>
+              <tr><th scope="row"><i class="bi bi-geo-alt"></i> Residencia</th><td>La Paz, Bolivia</td></tr>
+              <tr><th scope="row"><i class="bi bi-translate"></i> Idiomas</th><td>Español (nativo), Inglés (B2)</td></tr>
+              <tr><th scope="row"><i class="bi bi-car-front"></i> Licencia</th><td>Categoría B</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ===== Contacto (lista) ===== -->
+      <div class="col-lg-6">
+        <div class="tarjeta p-4 h-100">
+          <h3 class="titulo-seccion h4 mb-3">Contacto</h3>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2"><i class="bi bi-envelope-fill text-primary"></i>
+              <a id="enlaceCorreo" href="mailto:kevin.rossel@example.com">kevin.rossel@example.com</a></li>
+            <li class="mb-2"><i class="bi bi-telephone-fill text-primary"></i> +591 700 12345</li>
+            <li class="mb-2"><i class="bi bi-linkedin text-primary"></i>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/kevin-rossel</a></li>
+            <li class="mb-2"><i class="bi bi-github text-primary"></i>
+              <a href="https://github.com/" target="_blank" rel="noopener">github.com/kevinrossel</a></li>
+          </ul>
+          <button id="btnCopiar" class="btn btn-outline-primary btn-sm"><i class="bi bi-clipboard"></i> Copiar correo</button>
+        </div>
+      </div>
+
+      <!-- ===== Formulario de contacto ===== -->
+      <div class="col-12">
+        <div class="tarjeta p-4">
+          <h3 class="titulo-seccion h4 mb-3">Escríbeme</h3>
+          <form id="formContacto" class="row g-3" novalidate>
+            <div class="col-md-6">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input id="nombre" class="form-control" type="text" placeholder="Tu nombre" required>
+            </div>
+            <div class="col-md-6">
+              <label for="correo" class="form-label">Correo</label>
+              <input id="correo" class="form-control" type="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            <div class="col-12">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea id="mensaje" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="col-12"><button class="btn btn-primary" type="submit"><i class="bi bi-send"></i> Enviar</button></div>
+          </form>
+          <div id="respuestaForm" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-3 mt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span>&copy; <span id="anio"></span> Kevin Rossel Figueroa · Perfil profesional</span>
+      <!-- Forma 1 de escuchar eventos: atributo onclick en el HTML -->
+      <button class="btn btn-sm btn-light" onclick="volverArriba()"><i class="bi bi-arrow-up"></i> Volver arriba</button>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

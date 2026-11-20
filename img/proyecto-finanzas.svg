@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img" aria-label="Imagen del proyecto FinanzApp">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8e44ad"/><stop offset="1" stop-color="#c39bd3"/></linearGradient></defs>
+<rect width="500" height="320" fill="url(#g)"/>
+<circle cx="430" cy="50" r="90" fill="#ffffff" opacity=".12"/><circle cx="40" cy="300" r="70" fill="#ffffff" opacity=".12"/>
+<g transform="translate(0,-35)"><rect x="170" y="210" width="35" height="70" fill="#fff"/><rect x="225" y="170" width="35" height="110" fill="#fff"/><rect x="280" y="130" width="35" height="150" fill="#fff"/></g>
+<text x="250" y="305" fill="#fff" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">FinanzApp</text>
+</svg>
